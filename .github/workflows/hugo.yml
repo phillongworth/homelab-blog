@@ -5,12 +5,10 @@ on:
     branches: [main]
   workflow_dispatch:
 
-# Allow one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
-# Sets permissions of the GITHUB_TOKEN to allow Pages deployment
 permissions:
   contents: read
   pages: write
@@ -20,13 +18,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: "0.147.0"   # pin; bump when needed
+      HUGO_VERSION: "0.136.0"
     steps:
       - name: Checkout (with submodules for theme)
         uses: actions/checkout@v4
         with:
-          submodules: recursive   # pulls PaperMod
-          fetch-depth: 0          # full history → correct .Lastmod dates
+          submodules: recursive
+          fetch-depth: 0
 
       - name: Install Hugo (extended)
         run: |
