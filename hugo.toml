@@ -1,4 +1,4 @@
-baseURL = "https://<YOUR_GITHUB_USERNAME>.github.io/homelab-blog/"
+baseURL = "https://phillongworth.github.io/homelab-blog/"
 languageCode = "en-us"
 title = "Homelab"
 theme = "PaperMod"
@@ -16,7 +16,7 @@ buildExpired = false
   env = "production"
   title = "Homelab"
   description = "Notes, configs, and experiments from the homelab."
-  author = "<YOUR_NAME>"
+  author = "Phil"
   defaultTheme = "dark"           # auto | dark | light
   disableThemeToggle = false
   ShowReadingTime = true
@@ -39,12 +39,11 @@ buildExpired = false
     Title = "Welcome to the Homelab"
     Content = "Self-hosted services, infrastructure notes, and configs."
 
-  [params.socialIcons]
-    [[params.socialIcons]]
-      name = "github"
-      url = "https://github.com/<YOUR_GITHUB_USERNAME>"
-    [[params.socialIcons]]
-      name = "rss"
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/phillongworth"
+  [[params.socialIcons]]
+    name = "rss"
       url = "/index.xml"
 
 # ── Syntax highlighting ────────────────────────────────────────────────────────
