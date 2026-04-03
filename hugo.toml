@@ -81,7 +81,7 @@ buildExpired = false
     lineNos = false                # set true to show line numbers globally
     lineNumbersInTable = true
     noClasses = false              # false = use external CSS (PaperMod ships it)
-    style = "catppuccin-mocha"     # dark-friendly; change to "github" for light
+    style = "dracula"              # dark-friendly; change to "github" for light
     tabWidth = 4
 
   [markup.tableOfContents]
