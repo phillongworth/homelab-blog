@@ -1,0 +1,134 @@
+baseURL = "https://<YOUR_GITHUB_USERNAME>.github.io/homelab-blog/"
+languageCode = "en-us"
+title = "Homelab"
+theme = "PaperMod"
+paginate = 10
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[params]
+  env = "production"
+  title = "Homelab"
+  description = "Notes, configs, and experiments from the homelab."
+  author = "<YOUR_NAME>"
+  defaultTheme = "dark"           # auto | dark | light
+  disableThemeToggle = false
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true       # copy button on every code block
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  comments = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = true
+  tocopen = false
+
+  [params.homeInfoParams]
+    Title = "Welcome to the Homelab"
+    Content = "Self-hosted services, infrastructure notes, and configs."
+
+  [params.socialIcons]
+    [[params.socialIcons]]
+      name = "github"
+      url = "https://github.com/<YOUR_GITHUB_USERNAME>"
+    [[params.socialIcons]]
+      name = "rss"
+      url = "/index.xml"
+
+# ── Syntax highlighting ────────────────────────────────────────────────────────
+[markup]
+  defaultMarkdownHandler = "goldmark"
+
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      linkifyProtocol = "https"
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = false          # keep false to avoid smart-quote surprises
+
+    [markup.goldmark.parser]
+      autoHeadingID = true
+      autoHeadingIDType = "github" # GitHub-compatible anchor IDs
+      wrapStandAloneImageWithinParagraph = false
+
+    [markup.goldmark.parser.attribute]
+      block = true                 # enables {.class} attributes on blocks
+      title = true
+
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = false               # set true only if you need raw HTML in .md
+
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = false                # set true to show line numbers globally
+    lineNumbersInTable = true
+    noClasses = false              # false = use external CSS (PaperMod ships it)
+    style = "catppuccin-mocha"     # dark-friendly; change to "github" for light
+    tabWidth = 4
+
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
+
+# ── Outputs ───────────────────────────────────────────────────────────────────
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# ── Markdown link handling ─────────────────────────────────────────────────────
+# Obsidian exports [[wiki-links]] as standard Markdown links after processing.
+# The permalink below keeps URLs clean even when notes live in sub-folders.
+[permalinks]
+  posts    = "/posts/:slug/"
+  notes    = "/notes/:slug/"
+  snippets = "/snippets/:slug/"
+
+# ── Menu ─────────────────────────────────────────────────────────────────────
+[[menus.main]]
+  identifier = "posts"
+  name = "Posts"
+  url = "/posts/"
+  weight = 10
+
+[[menus.main]]
+  identifier = "notes"
+  name = "Notes"
+  url = "/notes/"
+  weight = 20
+
+[[menus.main]]
+  identifier = "snippets"
+  name = "Snippets"
+  url = "/snippets/"
+  weight = 30
+
+[[menus.main]]
+  identifier = "search"
+  name = "Search"
+  url = "/search/"
+  weight = 40
+
+[[menus.main]]
+  identifier = "tags"
+  name = "Tags"
+  url = "/tags/"
+  weight = 50

@@ -1,0 +1,16 @@
+# Hugo build output
+/public/
+/resources/_gen/
+/.hugo_build.lock
+
+# Hugo module cache
+/go.sum
+/go.work.sum
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.obsidian/
+*.swp
