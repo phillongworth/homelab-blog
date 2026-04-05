@@ -7,7 +7,6 @@ googleAnalytics = ""   # leave blank — disables the partial cleanly
 [pagination]
   pagerSize = 10
 enableRobotsTXT = true
-ignoreFiles = ["_templates"]
 buildDrafts = false
 buildFuture = false
 buildExpired = false
