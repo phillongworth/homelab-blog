@@ -10,6 +10,7 @@ showToc: false
 
 Welcome to the homelab blog. This is where I document configs, experiments,
 and anything worth writing down.
+And Im using Obsidin
 
 ```bash
 # Example: check what's listening on a port
