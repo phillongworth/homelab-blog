@@ -3,14 +3,14 @@ languageCode = "en-us"
 title = "Homelab"
 theme = "PaperMod"
 googleAnalytics = ""   # leave blank — disables the partial cleanly
-
-[pagination]
-  pagerSize = 10
 enableRobotsTXT = true
 ignoreFiles = ["/content/Templates/"]
 buildDrafts = false
 buildFuture = false
 buildExpired = false
+
+[pagination]
+  pagerSize = 10
 
 [minify]
   disableXML = true
